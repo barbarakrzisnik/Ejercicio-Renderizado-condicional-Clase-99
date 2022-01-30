@@ -1,0 +1,78 @@
+.body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.contenedor-tarjetas {
+    width: 1440px;
+    height: 1108px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta-enstock {
+    margin: 30px;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    img{
+        width: 300px;
+        height: 257px;
+    }
+     h1 {
+        font-size: 20px;
+        font-weight: 900;
+     }
+     .handle-precio{
+         display: flex;
+         justify-content: space-between;
+         h2 {
+            font-size: 18px;
+    
+         }
+         h3 {
+            opacity: 0.5;
+            font-size: 16px;
+         }
+    
+     }
+    
+}
+
+.tarjeta-sinstock {
+    margin: 30px;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    background-color: rgb(227, 230, 231);
+    img{
+        width: 300px;
+        height: 257px;
+    }
+     h1 {
+         text-decoration: line-through;
+        font-size: 20px;
+        font-weight: 900;
+     }
+     .handle-precio{
+         display: flex;
+         justify-content: space-between;
+         h2 {
+            font-size: 18px;
+    
+         }
+         h3 {
+            opacity: 0.5;
+            font-size: 16px;
+         }
+    
+     }
+
+}
+
+.sale {
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+}
