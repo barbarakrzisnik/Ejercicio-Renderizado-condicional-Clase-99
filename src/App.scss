@@ -8,13 +8,17 @@
     height: 1108px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
-.tarjeta-enstock {
+.contenedor-iconos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjeta {
     margin: 30px;
     width: 300px;
-    height: 400px;
+    height: 450px;
     padding: 10px;
     img{
         width: 300px;
@@ -37,21 +41,28 @@
          }
     
      }
+     .boton-carrito {
+        background-color: rgb(231, 231, 231);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+    }
     
 }
 
-.tarjeta-sinstock {
+.tarjeta-mouse {
     margin: 30px;
     width: 300px;
-    height: 400px;
+    height: 450px;
     padding: 10px;
-    background-color: rgb(227, 230, 231);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: indianred;
+    color: white;
     img{
         width: 300px;
         height: 257px;
     }
      h1 {
-         text-decoration: line-through;
         font-size: 20px;
         font-weight: 900;
      }
@@ -68,11 +79,50 @@
          }
     
      }
-
+     .boton-carrito {
+        background-color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
 }
 
 .sale {
     color: red;
     display: flex;
     justify-content: flex-end;
+}
+
+
+.modal-compra {
+    background-color: indianred;
+    border: white 4px solid;
+    position: absolute;
+    left: 500px;
+    top: 250px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div{ 
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        button {
+            background-color: rgb(231, 231, 231);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.sin-stock {
+    text-decoration: line-through;
+}
+
+.rojo {
+    color: red;
 }

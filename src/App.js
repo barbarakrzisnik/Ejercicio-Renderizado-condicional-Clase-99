@@ -1,5 +1,6 @@
 import Card from "./Components/Card.js"
-import Nav from "./Components/Nav.js"
+import Modal from "./Components/Modal.js"
+import { useState } from 'react';
 import "./App.scss"
 
 const products = [
@@ -71,18 +72,41 @@ const products = [
 
 
 const App = () => {
+
+  const [ modalCarrito, setModalCarrito ] = useState(false)
+
+    const abrirModal = () => {
+      setModalCarrito(true)
+    }
+
+    const cerrarModal = () => {
+      setModalCarrito(false)
+    }
+
+
   return(
-    <div className="contenedor-tarjetas">
-      {products.map(elemento => <Card 
-      isAvailable={elemento.isAvailable}
-      onSale={elemento.onSale}
-      imagen={elemento.img}
-      titulo={elemento.title}
-      tipo={elemento.type}
-      precio={elemento.price}
+    <div>
+      <div className="contenedor-tarjetas">
+        {products.map(elemento => <Card 
+        isAvailable={elemento.isAvailable}
+        onSale={elemento.onSale}
+        imagen={elemento.img}
+        titulo={elemento.title}
+        tipo={elemento.type}
+        precio={elemento.price}
+        controlModal={abrirModal}
        />)}
-    </div>  
+      </div>  
+
+      { modalCarrito && 
+        <div className="modal-compra">
+        <div> <button onClick={cerrarModal}>X</button> </div>
+        <h1>Usted va a comprar</h1>
+        <p>Desea seguir?</p>
+        </div>
+      }
+    </div> 
   )
 }
 
-export default App
+export default App 
