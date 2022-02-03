@@ -2,11 +2,13 @@ import { FaStar } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
 import { FaCartPlus } from 'react-icons/fa';
 import { useState } from 'react';
+import Rating from '@mui/material/Rating';
 
-const Card = ({ imagen, titulo, tipo, precio, isAvailable, onSale, controlModal }) => {
+const Card = ({ imagen, titulo, tipo, precio, isAvailable, onSale, controlModal, estrellas }) => {
 
 
 const [ animacionTarjeta, setAnimacionTarjeta ] = useState(false)
+const [value, setValue] = useState(0);
 
 
 
@@ -32,15 +34,9 @@ const handleOnMouseLeave = () => {
       </div>
 
       <div className="contenedor-iconos">
-        <div>
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaRegStar />
-          <FaRegStar />
-        </div>
+      <Rating name="read-only" value={estrellas} readOnly />
 
-        <div>
+      <div>
           <button className='boton-carrito' onClick={controlModal}>
             <FaCartPlus />
           </button>

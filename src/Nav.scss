@@ -1,0 +1,21 @@
+
+nav {
+    background-color: lightblue;
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    .hola {
+        font-size: 50px;
+        margin: 20px;
+        margin-left: 20px;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        li {
+            margin: 20px;
+        }
+
+    }
+}
